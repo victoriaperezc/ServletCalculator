@@ -8,9 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ExpressionCalculator {
-    private Deque<String> stackOps = new ArrayDeque<String>();
-    private List<String> postfix = new ArrayList<String>();
-    private String infix;
+    private final Deque<String> stackOps = new ArrayDeque<>();
+    private final List<String> postfix = new ArrayList<>();
+    private final String infix;
 
     public ExpressionCalculator (String infix) {
         this.infix = infix;
@@ -18,7 +18,7 @@ public class ExpressionCalculator {
 
     public List<String> fromInfixToPostfix() throws Exception {
 
-        StringBuilder temp = new StringBuilder("");
+        StringBuilder temp = new StringBuilder();
         char ch;
 
         if (checkExpression()) {
@@ -38,14 +38,14 @@ public class ExpressionCalculator {
             switch (ch) {
                 case '+':
                 case '-':
-                    putOper(ch, 1);
+                    putOperator(ch, 1);
                     break;
                 case '*':
                 case '/':
-                    putOper(ch, 2);
+                    putOperator(ch, 2);
                     break;
                 case '^':
-                    putOper(ch, 3);
+                    putOperator(ch, 3);
                     break;
                 case '(':
                     stackOps.push(String.valueOf(ch));
@@ -63,22 +63,22 @@ public class ExpressionCalculator {
         while (stackOps.size() > 0) {
             postfix.add(stackOps.pop());
         }
-        return postfix;
+        return new ArrayList<>(postfix);
     }
 
-    private void putOper(char operThis, int priorThis) {
+    private void putOperator(char opThis, int priorThis) {
 
-        char operTop;
+        char opTop;
 
         while (stackOps.size() > 0) {
-            operTop = stackOps.pop().charAt(0);
-            if (operTop == '(') {
-                stackOps.push(String.valueOf(operTop));
+            opTop = stackOps.pop().charAt(0);
+            if (opTop == '(') {
+                stackOps.push(String.valueOf(opTop));
                 break;
             } else {
                 int priorTop = 1;
 
-                switch (operTop) {
+                switch (opTop) {
                     case '+':
                     case '-':
                         priorTop = 1;
@@ -93,14 +93,14 @@ public class ExpressionCalculator {
                     default:
                 }
                 if (priorTop < priorThis) {
-                    stackOps.push(String.valueOf(operTop));
+                    stackOps.push(String.valueOf(opTop));
                     break;
                 } else {
-                    postfix.add(String.valueOf(operTop));
+                    postfix.add(String.valueOf(opTop));
                 }
             }
         }
-        stackOps.push(String.valueOf(operThis));
+        stackOps.push(String.valueOf(opThis));
     }
 
     private void putParen() {
@@ -121,10 +121,10 @@ public class ExpressionCalculator {
         return  matcher.matches();
     }
 
-    public double calculatePostfix() {
+    public double calculatePostfix() throws Exception {
 
-        Deque<Double> stackNums = new ArrayDeque<Double>();
-        double a = 0, b = 0, r = 0;
+        Deque<Double> stackNums = new ArrayDeque<>();
+        double a, b, r = 0;
 
         for (String element: postfix) {
             if (!Character.isDigit(element.charAt(0))) {
@@ -148,11 +148,10 @@ public class ExpressionCalculator {
                         break;
                     default:
                 }
-                stackNums.push(r);
             } else {
                 r = Double.parseDouble(element);
-                stackNums.push(r);
             }
+            stackNums.push(r);
         }
         return stackNums.pop();
     }
