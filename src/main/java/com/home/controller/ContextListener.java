@@ -7,10 +7,12 @@ import org.h2.jdbcx.JdbcConnectionPool;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
 
+@WebListener
 public class ContextListener implements ServletContextListener {
 
     @Override
@@ -23,7 +25,7 @@ public class ContextListener implements ServletContextListener {
             throwables.printStackTrace();
         }
         ServletContext sc = sce.getServletContext();
-        sc.setAttribute("JdbcTemplate", source);
+        sc.setAttribute("source", source);
     }
 
     @Override
