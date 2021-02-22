@@ -1,11 +1,6 @@
 package com.home.model;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 public class ExpressionCalculator {
     private final Deque<String> stackOps = new ArrayDeque<>();
@@ -21,9 +16,8 @@ public class ExpressionCalculator {
         StringBuilder temp = new StringBuilder();
         char ch;
 
-        if (checkExpression()) {
+        if (infix.matches(".*[^\\d.+*/^()-].*")) {
             throw new Exception("Wrong Input");
-
         }
 
         for (int i = 0; i < infix.length(); i++) {
@@ -111,17 +105,10 @@ public class ExpressionCalculator {
                 break;
             else
                 postfix.add(String.valueOf(ch));
-
         }
     }
 
-    private boolean checkExpression() {
-        Pattern pattern = Pattern.compile(".*[^\\d.+*/^()-].*");
-        Matcher matcher = pattern.matcher(infix);
-        return  matcher.matches();
-    }
-
-    public double calculatePostfix() throws Exception {
+    public double calculatePostfix() throws NoSuchElementException {
 
         Deque<Double> stackNums = new ArrayDeque<>();
         double a, b, r = 0;

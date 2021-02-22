@@ -41,7 +41,7 @@
                 ONOPERATION(%operation%) for example ONOPERATION(*) - calculation list with operation	<br>
                 POPULAR() for example POPULAR() - most used number	<br>
                 <br>
-                <input type="text" name="statisticReq">
+                <input type="text" name="statisticsReq">
 
                 <left>
                     <input type="SUBMIT">
