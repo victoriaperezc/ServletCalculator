@@ -99,7 +99,7 @@ public class ResultsDao {
             StringBuilder list = new StringBuilder();
             while (resultSet.next()) {
                 list.append(resultSet.getString(1));
-                list.append("\n");
+                list.append("<br>");
             }
             return list.toString();
         });
@@ -116,7 +116,7 @@ public class ResultsDao {
             StringBuilder list = new StringBuilder();
             while (resultSet.next()) {
                 list.append(resultSet.getString(1));
-                list.append("\n");
+                list.append("<br>");
             }
             return list.toString();
         });

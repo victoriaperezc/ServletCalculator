@@ -22,12 +22,21 @@
 
                 <input type="SUBMIT">
             </form>
-
-            Your input:
+            <%  String expression;
+                if (request.getParameter("expression") != null) {
+                    expression = request.getParameter("expression");
+                } else { expression = ""; }
+            %>
+            Your input: <br>
+            <%= expression %>
             <br>
-            <br>
-            Result:
-            <br>
+            <%  String answer;
+                if (request.getAttribute("answer") != null) {
+                    answer = (String) request.getAttribute("answer");
+                } else { answer = ""; }
+            %>
+            Result: <br>
+            <%= answer %>
             <br>
         </td>
 
@@ -45,12 +54,21 @@
 
                 <input type="SUBMIT">
             </form>
-
-            Your input:
+            <%  String statisticsReq;
+                if (request.getParameter("statisticsReq") != null) {
+                    statisticsReq = request.getParameter("statisticsReq");
+                } else { statisticsReq = ""; }
+            %>
+            Your input: <br>
+            <%= statisticsReq %>
             <br>
-            <br>
-            Result:
-            <br>
+            <%  String statistics;
+                if (request.getAttribute("statistics") != null) {
+                    statistics = (String) request.getAttribute("statistics");
+                } else { statistics = ""; }
+            %>
+            Result: <br>
+            <%= statistics %>
             <br>
         </td>
     </tr>
