@@ -1,6 +1,7 @@
 # ServletCalculator
 
-This web service acts as a calculator for string expressions. String grouping and unary minus are allowed in expressions.
+This web service acts as a calculator for string expressions. 
+String grouping and unary minus are allowed in expressions.
 The following operators are possible in expressions:
 + is addition, - is subtraction ,* is multiplication, / is division, ^ is exponentiation.
 
