@@ -56,7 +56,7 @@ public class ResultsDao {
         }
     }
 
-    public String count(String date) throws SQLException {
+    private String count(String date) throws SQLException {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate formattedDate = LocalDate.parse(date, dateTimeFormatter);
@@ -72,7 +72,7 @@ public class ResultsDao {
         });
     }
 
-    public String operation(String op) throws SQLException {
+    private String operation(String op) throws SQLException {
 
         String sql = "select count(*) from results \n" +
                 "  where expression like ? ;" ;
@@ -85,7 +85,7 @@ public class ResultsDao {
         });
     }
 
-    public String ondate(String date) throws SQLException {
+    private String ondate(String date) throws SQLException {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate formattedDate = LocalDate.parse(date, dateTimeFormatter);
@@ -105,7 +105,7 @@ public class ResultsDao {
         });
     }
 
-    public String onoperation(String op) throws SQLException {
+    private String onoperation(String op) throws SQLException {
 
         String sql = "select expression from results \n" +
                 "  where expression like ? ;" ;
@@ -122,7 +122,7 @@ public class ResultsDao {
         });
     }
 
-    public String popular() throws SQLException {
+    private String popular() throws SQLException {
 
         return source.statement(stmt -> {
             ResultSet resultSet = stmt.executeQuery("select numbers from results ;");

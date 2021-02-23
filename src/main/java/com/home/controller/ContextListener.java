@@ -21,7 +21,7 @@ public class ContextListener implements ServletContextListener {
         SimpleJdbcTemplate source = new SimpleJdbcTemplate(pool);
         try {
             new DbInit(source).create();
-        } catch (SQLException | IOException throwables) {
+        } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         ServletContext sc = sce.getServletContext();

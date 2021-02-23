@@ -11,7 +11,7 @@ public class DbInit {
         this.source = source;
     }
 
-    public void create() throws SQLException, IOException {
+    public void create() throws SQLException {
         String sql = "create table results (\n" +
                 "  id IDENTITY primary key,\n" +
                 "  expression VARCHAR(100) not null,\n" +
