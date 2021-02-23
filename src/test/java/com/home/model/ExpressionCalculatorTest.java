@@ -2,10 +2,8 @@ package com.home.model;
 
 import org.junit.Test;
 
-import java.util.NoSuchElementException;
-
 import static com.home.model.dao.TestData.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ExpressionCalculatorTest {
     ExpressionCalculator calculator;
@@ -29,12 +27,4 @@ public class ExpressionCalculatorTest {
         calculator = new ExpressionCalculator(WRONGEXPRESSION1);
         calculator.fromInfixToPostfix();
     }
-
-    @Test(expected = NoSuchElementException.class)
-    public void wrongPostfix() throws Exception {
-        calculator = new ExpressionCalculator(WRONGEXPRESSION2);
-        calculator.calculatePostfix();
-    }
-
-
 }
