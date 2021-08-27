@@ -4,7 +4,7 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-<h1 align="left">Expression Calculator</h1>
+<h1 align="left">Calculadora de expresiones</h1>
 <style>
 
     td {
@@ -15,11 +15,11 @@
     <tr>
         <td width="500" >
             <form method="POST" action="ExpressionServlet">
-                <h2>Enter expression:</h2>
-                For example (-7*8+9-(9/4.5))^2,	<br>
-                where + is addition, - is subtraction , <br>
-                * is multiplication, / is division, ^ is exponentiation,	<br>
-                you can also use parentheses to group operations.	<br>
+                <h2>Ingrese la expresión:</h2>
+                Por ejemplo (-7*8+9-(9/4.5))^2,	<br>
+                Donde + es suma, - es resta, <br>
+                * es multiplicación, / es división, ^ es exponenciación,<br>
+		también puedes utilizar parentesis para agrupar operaciones.<br>
                 <br>
                 <input type="text" name="expression">
 
@@ -36,13 +36,13 @@
 
         <td width="700" >
             <form method="POST" action="StatisticsServlet">
-                <h2>Enter a request to get statistics:</h2>
-                The following options are possible: <br>
-                COUNT(%date%) for example COUNT(16-02-2021) - number of calculations per date	<br>
-                OPERATION(%operation%) for example OPERATION(+)- number of calculations with operation  	<br>
-                ONDATE(% date%) for example ONDATE(16-02-2021) - list of calculations for a date 	<br>
-                ONOPERATION(%operation%) for example ONOPERATION(*) - calculation list with operation	<br>
-                POPULAR() for example POPULAR() - most used number	<br>
+                <h2>Ingrese una solicitud para obtener estadísticas:</h2>
+                Son posibles las siguientes opciones: <br>
+                COUNT(%date%) por ejemplo COUNT (16-02-2021) - número de cálculos por fecha	<br>
+                OPERATION(%operation%) por ejemplo OPERACIÓN (+) - número de cálculos con operación  	<br>
+                ONDATE(% date%) por ejemplo ONDATE (16-02-2021) - lista de cálculos para una fecha 	<br>
+                ONOPERATION(%operation%) por ejemplo ONOPERATION (*) - lista de cálculo con operación	<br>
+                POPULAR() por ejemplo POPULAR () - número más utilizado 	<br>
                 <br>
                 <input type="text" name="statisticsReq">
 

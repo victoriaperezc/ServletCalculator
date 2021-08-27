@@ -1,5 +1,11 @@
 body {
-    background-color: #d9c3db;
+    background-color: #e9d6eb;
     font-family: "Homer Simpson UI";
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
