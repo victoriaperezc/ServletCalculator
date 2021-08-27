@@ -4,7 +4,7 @@
 <div class="wrapper fadeInDown">
     <div id="formContent">
     <title>Calculator</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
 <h1 align="left">Calculadora de expresiones</h1>
