@@ -42,7 +42,7 @@
             <br>
         </td>
 
-        <td width="700" >
+       <!-- <td width="700" >
             <form method="POST" action="StatisticsServlet">
                 <h2>Ingrese una solicitud para obtener estadisticas:</h2>
                 Son posibles las siguientes opciones: <br>
@@ -71,7 +71,7 @@
             Resultado: <br>
             <%= statistics %>
             <br>
-        </td>
+        </td> -->
     </tr>
 </table>
 
