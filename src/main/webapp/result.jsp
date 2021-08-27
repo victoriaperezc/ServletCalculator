@@ -1,6 +1,11 @@
 <html>
+<head>
+        <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
 <title>Calculator</title>
     <link href="styles.css" rel="stylesheet">
+
 <body>
 
 <h1 align="left">Calculadora de expresiones</h1>
@@ -74,6 +79,6 @@
         </td> -->
     </tr>
 </table>
-
+</div>
 </body>
 </html>
