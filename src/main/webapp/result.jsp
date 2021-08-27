@@ -19,7 +19,7 @@
     <tr>
         <td width="500" >
             <form method="POST" action="ExpressionServlet">
-                <h2>Ingrese la expresion:</h2>
+                <h2>Ingrese la expresion:</h2><br>
                 Por ejemplo (-7*8+9-(9/4.5))^2,	<br>
                 Donde + es suma, - es resta, <br>
                 * es multiplicacion, / es division, ^ es exponenciacion,<br>
@@ -46,37 +46,6 @@
             <%= answer %>
             <br>
         </td>
-
-       <!-- <td width="700" >
-            <form method="POST" action="StatisticsServlet">
-                <h2>Ingrese una solicitud para obtener estadisticas:</h2>
-                Son posibles las siguientes opciones: <br>
-                COUNT(%date%) por ejemplo COUNT (16-02-2021) - numero de calculos por fecha	<br>
-                OPERATION(%operation%) por ejemplo OPERAtION (+) - numero de calculos con operación  	<br>
-                ONDATE(% date%) por ejemplo ONDATE (16-02-2021) - lista de calculos para una fecha 	<br>
-                ONOPERATION(%operation%) por ejemplo ONOPERATION (*) - lista de calculo con operacion	<br>
-                POPULAR() por ejemplo POPULAR () - numero mas utilizado 	<br>
-                <br>
-                <input type="text" name="statisticsReq">
-                <input type="SUBMIT">
-            </form>
-            <%  String statisticsReq;
-                if (request.getParameter("statisticsReq") != null) {
-                    statisticsReq = request.getParameter("statisticsReq");
-                } else { statisticsReq = ""; }
-            %>
-            Tu entrada: <br>
-            <%= statisticsReq %>
-            <br>
-            <%  String statistics;
-                if (request.getAttribute("statistics") != null) {
-                    statistics = (String) request.getAttribute("statistics");
-                } else { statistics = ""; }
-            %>
-            Resultado: <br>
-            <%= statistics %>
-            <br>
-        </td> -->
     </tr>
 </table>
 </div>
