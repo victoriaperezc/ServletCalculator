@@ -16,7 +16,7 @@
                 For example (-7*8+9-(9/4.5))^2,	<br>
                 where + is addition, - is subtraction , <br>
                 * is multiplication, / is division, ^ is exponentiation,	<br>
-                you can also use parentheses to group operations	<br>
+                you can also use parentheses to group operations.	<br>
                 <br>
                 <input type="text" name="expression">
 
