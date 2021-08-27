@@ -1,6 +1,9 @@
 <html>
+<head>
+    <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
 <body>
-
 <h1 align="left">Expression Calculator</h1>
 <style>
 
