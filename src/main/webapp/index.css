@@ -28,6 +28,16 @@ h2 {
   color: #cccccc;
 }
 
+h1 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: #050505;
+}
+
 
 
 /* STRUCTURE */
