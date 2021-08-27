@@ -27,10 +27,10 @@
                 <input type="SUBMIT">
             </form>
 
-            Your input:
+            Tu entrada:
             <br>
             <br>
-            Result:
+            Resultado:
             <br>
             <br>
         </td>
@@ -39,9 +39,9 @@
             <form method="POST" action="StatisticsServlet">
                 <h2>Ingrese una solicitud para obtener estadisticas:</h2>
                 Son posibles las siguientes opciones: <br>
-                COUNT(%date%) por ejemplo COUNT (16-02-2021) - numero de cálculos por fecha	<br>
-                OPERATION(%operation%) por ejemplo OPERAtION (+) - numero de cálculos con operación  	<br>
-                ONDATE(% date%) por ejemplo ONDATE (16-02-2021) - lista de cálculos para una fecha 	<br>
+                COUNT(%date%) por ejemplo COUNT (16-02-2021) - numero de calculos por fecha	<br>
+                OPERATION(%operation%) por ejemplo OPERAtION (+) - numero de calculos con operación  	<br>
+                ONDATE(% date%) por ejemplo ONDATE (16-02-2021) - lista de calculos para una fecha 	<br>
                 ONOPERATION(%operation%) por ejemplo ONOPERATION (*) - lista de calculo con operacion	<br>
                 POPULAR() por ejemplo POPULAR () - numero mas utilizado 	<br>
                 <br>
@@ -50,10 +50,10 @@
                 <input type="SUBMIT">
             </form>
 
-            Your input:
+            Tu entrada:
             <br>
             <br>
-            Result:
+            Resultado:
             <br>
             <br>
         </td>
