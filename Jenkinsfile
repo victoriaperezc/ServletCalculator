@@ -2,14 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage("Build"){
+        stage("Clean"){
             steps {
                 bat "mvn -version"
-                bat "mvn clean install"
+                bat "mvn clean"
             }
         }
 
-        stage('Build Jar'){
+        stage("test"){
+            steps {
+                bat "mvn test"
+            }
+        }
+
+        stage('Build War'){
             steps {
                 bat 'mvn package'
                 stash includes: 'target/*.war', name: 'targetfiles'
