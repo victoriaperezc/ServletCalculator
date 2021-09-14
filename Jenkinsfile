@@ -22,9 +22,6 @@ pipeline {
             }
         }
         stage("sonarQube"){
-            agent{
-                label 'master'
-            }
             steps{
                 withSonnarQubeEnv('sonarqube'){
                 //sh "${scannerHome}/bin/sonar-scanner"
