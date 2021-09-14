@@ -30,7 +30,8 @@ pipeline {
                     scannerHome = tool 'SonarQube Scanner 4.6.2.2472'
                 }
                 withSonnarQubeEnv('Jenkins'){
-                sh "${scannerHome}/bin/sonar-scanner"
+                //sh "${scannerHome}/bin/sonar-scanner"
+                bat 'mvn sonar:sonar'
                 }
             }
         }
