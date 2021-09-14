@@ -26,7 +26,7 @@ pipeline {
                 label 'master'
             }
             steps{
-                withSonnarQubeEnv('Jenkins'){
+                withSonnarQubeEnv('sonarqube'){
                 //sh "${scannerHome}/bin/sonar-scanner"
                 bat 'mvn sonar:sonar'
                 }
