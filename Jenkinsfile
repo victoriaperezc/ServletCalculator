@@ -21,19 +21,13 @@ pipeline {
                 stash includes: 'target/*.war', name: 'targetfiles'
             }
         }
-        stage("sonarQube"){
-            agent{
-                label 'master'
-            }
-            steps{
-                script{
-                    scannerHome = tool 'SonarQube Scanner 4.6.2.2472'
-                }
-                withSonnarQubeEnv('SonarQube'){
-                sh "${scannerHome}/bin/sonar-scanner"
+        stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('Jenkins') {
+                        bat 'mvn clean package sonar:sonar'
+                    }
                 }
             }
+            
         }
     }
-
-}
