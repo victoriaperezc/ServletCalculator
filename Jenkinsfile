@@ -26,9 +26,6 @@ pipeline {
                 label 'master'
             }
             steps{
-                script{
-                    scannerHome = tool 'SonarQube'
-                }
                 withSonnarQubeEnv('Jenkins'){
                 //sh "${scannerHome}/bin/sonar-scanner"
                 bat 'mvn sonar:sonar'
