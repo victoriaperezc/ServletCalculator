@@ -29,7 +29,7 @@ pipeline {
                 script{
                     scannerHome = tool 'SonarQube Scanner 4.6.2.2472'
                 }
-                withSonnarQubeEnv('SonarQube'){
+                withSonnarQubeEnv('Jenkins'){
                 sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
