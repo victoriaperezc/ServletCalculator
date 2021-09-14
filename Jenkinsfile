@@ -23,7 +23,7 @@ pipeline {
         }
         stage("sonarQube"){
             steps{
-                withSonnarQubeEnv('sonarqube'){
+                withSonarQubeEnv('Jenkins'){
                 //sh "${scannerHome}/bin/sonar-scanner"
                 bat 'mvn sonar:sonar'
                 }
