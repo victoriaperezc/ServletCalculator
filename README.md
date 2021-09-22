@@ -19,3 +19,5 @@ ONDATE(% date%) for example ONDATE(16-02-2021) - list of calculations for a date
 ONOPERATION(%operation%) for example ONOPERATION(*) - calculation list with operation
 
 POPULAR() for example POPULAR() - most used number
+
+prueba ramas
